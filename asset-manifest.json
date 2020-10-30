@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/kohli-react/static/css/main.186158c0.chunk.css",
-    "main.js": "/kohli-react/static/js/main.b1d3f3d9.chunk.js",
-    "main.js.map": "/kohli-react/static/js/main.b1d3f3d9.chunk.js.map",
+    "main.css": "/kohli-react/static/css/main.2b698ad4.chunk.css",
+    "main.js": "/kohli-react/static/js/main.ce80d1c7.chunk.js",
+    "main.js.map": "/kohli-react/static/js/main.ce80d1c7.chunk.js.map",
     "runtime-main.js": "/kohli-react/static/js/runtime-main.4ced01f5.js",
     "runtime-main.js.map": "/kohli-react/static/js/runtime-main.4ced01f5.js.map",
     "static/js/2.5a618a7e.chunk.js": "/kohli-react/static/js/2.5a618a7e.chunk.js",
@@ -10,13 +10,14 @@
     "static/js/3.4bab9e9f.chunk.js": "/kohli-react/static/js/3.4bab9e9f.chunk.js",
     "static/js/3.4bab9e9f.chunk.js.map": "/kohli-react/static/js/3.4bab9e9f.chunk.js.map",
     "index.html": "/kohli-react/index.html",
-    "static/css/main.186158c0.chunk.css.map": "/kohli-react/static/css/main.186158c0.chunk.css.map",
-    "static/js/2.5a618a7e.chunk.js.LICENSE.txt": "/kohli-react/static/js/2.5a618a7e.chunk.js.LICENSE.txt"
+    "static/css/main.2b698ad4.chunk.css.map": "/kohli-react/static/css/main.2b698ad4.chunk.css.map",
+    "static/js/2.5a618a7e.chunk.js.LICENSE.txt": "/kohli-react/static/js/2.5a618a7e.chunk.js.LICENSE.txt",
+    "static/media/img3.32bda2e5.jpg": "/kohli-react/static/media/img3.32bda2e5.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.4ced01f5.js",
     "static/js/2.5a618a7e.chunk.js",
-    "static/css/main.186158c0.chunk.css",
-    "static/js/main.b1d3f3d9.chunk.js"
+    "static/css/main.2b698ad4.chunk.css",
+    "static/js/main.ce80d1c7.chunk.js"
   ]
 }
