@@ -16,12 +16,13 @@ code {
   text-align: center;
   color:rgb(204, 6, 6);
 }
+img{
+  width: 40%;
+}
 .top {
   position: absolute;
   top:5%;
-  left:45%;
-  
-  
+  left:45%;  
 }
 
 .bottom {
