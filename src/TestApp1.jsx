@@ -9,7 +9,7 @@ const TestApp1=()=>{
     const[newUpper,setNewUpper]=useState();
     const[bottom,setBottom]=useState();
     const[newBottom,setNewBottom]=useState();
-    const[image,setImage]=useState(first); 
+    const[image,setImage]=useState("https://picsum.photos/300/300"); 
     const inputEvent=(event)=>{
         setUpper(event.target.value);   
     }
@@ -26,7 +26,7 @@ const TestApp1=()=>{
         var img=event.target.files[0];
        
     setImage( URL.createObjectURL(img));
-    console.log(img);
+    //console.log(img);
     
     }
     const img="https://picsum.photos/300/400";
@@ -45,7 +45,6 @@ const TestApp1=()=>{
             <input className="form-control col-sm-3 mx-auto" type="text" onChange={inputEvent2} placeholder="Bottom text"/><br />
             <input className="form-control col-sm-3 mx-auto" type="file" name="myImage" onChange={imageUpload} /><br/>
             <input className="btn btn-success mx-auto mt-2" onClick={fun} value="submit" type="submit"/>
-            
             </div>
         </>
     );
