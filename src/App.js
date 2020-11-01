@@ -1,4 +1,4 @@
-import './App.css';
+
 import TestApp1 from './TestApp1';
 
 function App() {
