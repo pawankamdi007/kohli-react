@@ -6,7 +6,7 @@ import google from '../logo/google-badge.png';
 const Footer=()=>{
     return(
         <>
-        <footer className="mt-5" >
+        <footer>
 <div className="container">
 <div className="row">
 <div className="col-12 col-sm-3 mb-3 pt-4">
