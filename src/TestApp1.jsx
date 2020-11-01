@@ -1,7 +1,5 @@
 import { useState } from "react";
-import "./index.css";
-import first from './img/img3.jpg';
-
+import Footer from "./comp/Footer";
 
 const TestApp1=()=>{
     
@@ -32,21 +30,28 @@ const TestApp1=()=>{
     const img="https://picsum.photos/300/400";
     return(
         <>
-            <div className="container">
-            <img className="mt-2" src={image} alt=""/>
+        <div className="jumbotron ">
+        <h3>K-MEME GENERATOR</h3>
+        </div>
+
+            <div className="container meme">
+            <img id="main-img" className="mt-2" src={image} alt=""/>
             
             <h1 className="top"> {newUpper}</h1>
             <h1 className="bottom">{newBottom}</h1>
             </div>
            
             <br />
-            <div className="container">
+            <div className="container cont">
             <input className="form-control col-sm-3 mx-auto" type="text" onChange={inputEvent} value={upper} placeholder="Upper text"/><br />
             <input className="form-control col-sm-3 mx-auto" type="text" onChange={inputEvent2} placeholder="Bottom text"/><br />
             <input className="form-control col-sm-3 mx-auto" type="file" name="myImage" onChange={imageUpload} /><br/>
-            <input className="btn btn-success mx-auto mt-2" onClick={fun} value="submit" type="submit"/>
+            <input className="btn btn-success col-sm-3 mx-auto  mt-2 mb-2 submit" onClick={fun} value="submit" type="submit"/>
             </div>
-        </>
+            <Footer />
+            </>
+            
+           
     );
 };
 

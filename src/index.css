@@ -1,22 +1,10 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-.container{
+.meme{
   position: relative;
   text-align: center;
-  color:rgb(204, 6, 6);
+ 
 }
-img{
+#main-img img{
   width: 40%;
   height: 300px;
 }
@@ -31,4 +19,46 @@ img{
   bottom:5%;
   left:45%;
 }
+.cont{
+  text-align: center;
+}
 
+footer{
+  background-color: rgb(20, 19, 19);
+  color: rgb(159, 170, 159);
+  padding:20px;
+}
+footer #logo{
+  width: 41px;
+  height: 50px;
+}
+footer hr{
+  border:1px solid white;
+}
+footer .family li {
+list-style-type: none;
+}
+#google-play{
+  width: 150;
+  height: 20;
+}
+
+@import url(//fonts.googleapis.com/css?family=Oregano|Merienda);
+
+.mwl {
+font-family: 'Merienda', cursive;
+}
+.ks {
+font-family: 'Oregano', cursive;
+font-size:18px;
+}
+.ks a{
+text-transform: none !important;
+}
+.scrollbtn{
+  position: absolute;
+  bottom:0;
+  right:0;
+  outline: none;
+
+}
