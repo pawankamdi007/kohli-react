@@ -33,7 +33,6 @@ const MemeApp=()=>{
         </div>
            <div className="bg-success"> 
 
-
             <div className="container bg-dark">
             <div className="row"> 
             <div className="col-12  meme p-3">
