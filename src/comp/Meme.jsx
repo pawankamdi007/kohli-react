@@ -85,8 +85,9 @@ const Meme = () => {
             <div className="col-12  meme p-3">
             <canvas id="myCanvas" className="col-12 col-sm-4 mr-auto"
             ref={canvas}
-            width={cwidth}
-            height={cheight}
+            width="600"
+            height="600"
+            style={{ objectFit: "cover" }}
           /> 
             </div>
             </div>
