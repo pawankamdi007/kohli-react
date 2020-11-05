@@ -1,16 +1,15 @@
-import React, { Component } from "react";
-
+import React, { useState,useRef } from "react";
 var ReactDOM = require("react-dom");
 
-export default class test extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      image: ""
-    };
-  }
+const NewApp=()=> {
+  const[image,setImage]=useState(null);
+  const[upper,setUpper]=useState('');
+  const file = useRef(null)
 
-  renderCanvas() {
+const textUpper=(e)=>{
+    setUpper(e.target.value);
+}
+  const renderCanvas=()=>{
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
     var img = document.getElementById("user-Img");
@@ -29,51 +28,61 @@ export default class test extends Component {
 
     // scale & draw the image onto the canvas
     ctx.drawImage(img, 0, 0, iw, ih);
+    ctx.font = "32px sans-serif"
+        ctx.fillStyle = "red"
+        ctx.textAlign = "center"
+  
+        ctx.fillText(upper, iw/2, 50)
+ 
   }
 
-  onImageChange = async event => {
-    if (event.target.files && event.target.files[0]) {
-      await this.setState({
-        image: URL.createObjectURL(event.target.files[0])
-      });
+  const onImageChange = (event) => {
+    if (event.target.files[0]) {
+     setImage(URL.createObjectURL(event.target.files[0]));
       //Load image into div
-     
-      
+      const imagePreview = (
+        <div>
+          <div id="circularEdit">
+            <img
+              src={image}
+              className="center"
+              style={{ verticalAlign: "middle", cursor: "pointer",width:"100%",display:"none" }}
+              id="user-Img" alt="myimg"
+            />
+          </div>
+        </div>
+      );
+      ReactDOM.render(imagePreview, document.getElementById("picturePreview"));
     }
   };
-  render() {
+
     return (
       <div>
         <input
           type="file"
           id="profile-picture-file"
-          onChange={this.onImageChange}
+          onChange={onImageChange}
           name="myImage"
           accept="image/*"
-          ref={ref => (this.fileUpload = ref)}
+         
         />
+
         <h5>Image Preview</h5>
-        <div id="picturePreview">
-        <div>
-          <div id="circularEdit">
-            <img
-              id="target"
-              src={this.state.image}
-              className="center"
-              style={{ verticalAlign: "middle", cursor: "pointer",width:"50%",display:"none" }}
-              id="user-Img" alt="preview img"
-            />
-          </div>
-        </div>
-        </div>
-        <button onClick={() => this.renderCanvas()}>Map to canvas</button>
+        
+        <div id="picturePreview" />
+        <button onClick={renderCanvas}>Map to canvas</button>
+        
         <canvas
           id="myCanvas"
           width="600"
           height="600"
+          ref={file}
           style={{ objectFit: "cover" }}
         />
+        <input type="text" placeholder="upper text" onChange={textUpper} />
+
       </div>
     );
   }
-}
+
+  export default NewApp;
