@@ -52,7 +52,7 @@ const MemeApp=()=>{
         </div>
            <div className="bg-success"> 
 
-            <div className="container bg-dark" style={{height:"100vh"}}>
+            <div className="container bg-dark">
             <div className="row"> 
             <div className="col-12  meme p-3">
             <a href={image} download="w3logo.jpg">

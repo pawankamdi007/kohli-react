@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Meme from './comp/Meme';
+
 import reportWebVitals from './reportWebVitals';
+import TestApp1 from './TestApp1';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Meme />
+    <TestApp1 />
   </React.StrictMode>,
   document.getElementById('root')
 );
