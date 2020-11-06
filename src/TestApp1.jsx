@@ -1,11 +1,12 @@
-import Meme from "./comp/Meme";
+
 import Footer from "./comp/Footer";
+import MyMemeApp from "./comp/MyMemeApp";
 
 const TestApp1=()=>{
 
     return(
         <>
-            <Meme />
+            <MyMemeApp />
             <Footer />
             </>
             

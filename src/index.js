@@ -4,13 +4,10 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 import TestApp1 from './TestApp1';
-import NewComp from './comp/NewComp';
-import NewApp from './comp/NewApp';
-import MyMemeApp from './comp/MyMemeApp';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MyMemeApp />
+    <TestApp1 />
   </React.StrictMode>,
   document.getElementById('root')
 );
