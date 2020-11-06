@@ -24,6 +24,7 @@ const MemeApp=()=>{
     const inputEvent2=(event)=>{
         setBottom(event.target.value);
     }
+    
     const imageUpload=(event)=>{
         var img=event.target.files[0];
        

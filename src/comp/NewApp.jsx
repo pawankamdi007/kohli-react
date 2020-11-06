@@ -1,5 +1,4 @@
 import React, { useState,useRef } from "react";
-import myimg from '../img/img1.jpg';
 var ReactDOM = require("react-dom");
 
 const NewApp=()=> {
