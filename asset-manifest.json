@@ -1,24 +1,27 @@
 {
   "files": {
     "main.css": "/kohli-react/static/css/main.811854e7.chunk.css",
-    "main.js": "/kohli-react/static/js/main.d0bccad0.chunk.js",
-    "main.js.map": "/kohli-react/static/js/main.d0bccad0.chunk.js.map",
-    "runtime-main.js": "/kohli-react/static/js/runtime-main.727f358b.js",
-    "runtime-main.js.map": "/kohli-react/static/js/runtime-main.727f358b.js.map",
-    "static/js/2.44711f00.chunk.js": "/kohli-react/static/js/2.44711f00.chunk.js",
-    "static/js/2.44711f00.chunk.js.map": "/kohli-react/static/js/2.44711f00.chunk.js.map",
-    "static/js/3.878f1a67.chunk.js": "/kohli-react/static/js/3.878f1a67.chunk.js",
-    "static/js/3.878f1a67.chunk.js.map": "/kohli-react/static/js/3.878f1a67.chunk.js.map",
+    "main.js": "/kohli-react/static/js/main.fc8faedd.chunk.js",
+    "main.js.map": "/kohli-react/static/js/main.fc8faedd.chunk.js.map",
+    "runtime-main.js": "/kohli-react/static/js/runtime-main.164df646.js",
+    "runtime-main.js.map": "/kohli-react/static/js/runtime-main.164df646.js.map",
+    "static/css/2.20aa2d7b.chunk.css": "/kohli-react/static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.51816a02.chunk.js": "/kohli-react/static/js/2.51816a02.chunk.js",
+    "static/js/2.51816a02.chunk.js.map": "/kohli-react/static/js/2.51816a02.chunk.js.map",
+    "static/js/3.f76b17e2.chunk.js": "/kohli-react/static/js/3.f76b17e2.chunk.js",
+    "static/js/3.f76b17e2.chunk.js.map": "/kohli-react/static/js/3.f76b17e2.chunk.js.map",
     "index.html": "/kohli-react/index.html",
+    "static/css/2.20aa2d7b.chunk.css.map": "/kohli-react/static/css/2.20aa2d7b.chunk.css.map",
     "static/css/main.811854e7.chunk.css.map": "/kohli-react/static/css/main.811854e7.chunk.css.map",
-    "static/js/2.44711f00.chunk.js.LICENSE.txt": "/kohli-react/static/js/2.44711f00.chunk.js.LICENSE.txt",
+    "static/js/2.51816a02.chunk.js.LICENSE.txt": "/kohli-react/static/js/2.51816a02.chunk.js.LICENSE.txt",
     "static/media/K_Logo_White.8dbb07b7.png": "/kohli-react/static/media/K_Logo_White.8dbb07b7.png",
     "static/media/google-badge.f902960a.png": "/kohli-react/static/media/google-badge.f902960a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.727f358b.js",
-    "static/js/2.44711f00.chunk.js",
+    "static/js/runtime-main.164df646.js",
+    "static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.51816a02.chunk.js",
     "static/css/main.811854e7.chunk.css",
-    "static/js/main.d0bccad0.chunk.js"
+    "static/js/main.fc8faedd.chunk.js"
   ]
 }
