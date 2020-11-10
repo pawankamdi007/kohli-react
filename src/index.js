@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Photo from './gallary/Myphoto';
+import Photos from './gallary/photos';
 import './index.css';
+import One from './meme/one';
 
 import reportWebVitals from './reportWebVitals';
 import TestApp1 from './TestApp1';
 
 ReactDOM.render(
   <React.StrictMode>
-    <TestApp1 />
+    <One />
   </React.StrictMode>,
   document.getElementById('root')
 );

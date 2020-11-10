@@ -2,7 +2,7 @@ import FileSaver from 'file-saver';
 
 import { React,useEffect,useRef,useState } from 'react';
 
-const MyMemeApp = () => {
+const MyMemeApp = ({template}) => {
 
     const [image, setImage] = useState(null)
     const canvas = useRef(null)
@@ -16,7 +16,7 @@ const MyMemeApp = () => {
     useEffect(() => {
       const catImage = new Image();
       catImage.crossOrigin = 'Anonymous';
-      catImage.src = "https://picsum.photos/300/400"
+      catImage.src = template.url;
       catImage.onload = () => setImage(catImage)
     }, [])
 
@@ -35,7 +35,7 @@ const MyMemeApp = () => {
           const ctx = canvas.current.getContext("2d")
           ctx.fillStyle = "black"
          
-          ctx.drawImage(image, 0, 0,300,400)
+          ctx.drawImage(image, 0, 0,500,600)
     
           ctx.font = `${fontSize}px ${fontFamily}`
           ctx.fillStyle = `${fontColor}`
@@ -43,8 +43,8 @@ const MyMemeApp = () => {
           
          
     
-          ctx.fillText(topText, 150, 50)
-          ctx.fillText(bottomText, 150,350)
+          ctx.fillText(topText, 250, 50)
+          ctx.fillText(bottomText, 250,550)
     
         }
       }, [image, canvas, topText, bottomText,fontColor,fontFamily,fontSize])
@@ -78,17 +78,15 @@ const MyMemeApp = () => {
  
     return (
       <div>
-        <div className="jumbotron mb-0 bg-secondary ">
-        <h3>K-MEME GENERATOR</h3>
-        </div>
+        
         <div className="bg-success"> 
         <div className="container bg-dark">
             <div className="row"> 
             <div className="col-12  meme p-4">
             <canvas id="myCanvas" className="col-12 col-sm-4 mx-auto p-2"
             ref={canvas}
-            width="300"
-            height="400"
+            width="500"
+            height="600"
             style={{ objectFit: "contain" }}
           /> 
             </div>
