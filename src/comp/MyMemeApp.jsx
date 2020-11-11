@@ -1,7 +1,7 @@
 import FileSaver from 'file-saver';
-
+import {FacebookShareButton, FacebookIcon} from "react-share";
 import { React,useEffect,useRef,useState } from 'react';
-
+import {Base64Binary} from 'react-file-base64';
 const MyMemeApp = ({template}) => {
 
     const [image, setImage] = useState(null)
@@ -10,7 +10,8 @@ const MyMemeApp = ({template}) => {
     const [bottomText, setBottomText] = useState('')
     const [fontSize,setFontSize]=useState(35);
     const[fontFamily,setFontFamily]=useState("helvetica");
-    const[fontColor,setFontColor]=useState("red");
+    const[fontColor,setFontColor]=useState("black");
+    const[fb,setFb]=useState('');
    
 
     useEffect(() => {
@@ -35,7 +36,7 @@ const MyMemeApp = ({template}) => {
           const ctx = canvas.current.getContext("2d")
           ctx.fillStyle = "black"
          
-          ctx.drawImage(image, 0, 0,500,600)
+          ctx.drawImage(image, 0, 0,500,700)
     
           ctx.font = `${fontSize}px ${fontFamily}`
           ctx.fillStyle = `${fontColor}`
@@ -44,7 +45,7 @@ const MyMemeApp = ({template}) => {
          
     
           ctx.fillText(topText, 250, 50)
-          ctx.fillText(bottomText, 250,550)
+          ctx.fillText(bottomText, 250,650)
     
         }
       }, [image, canvas, topText, bottomText,fontColor,fontFamily,fontSize])
@@ -72,13 +73,25 @@ const MyMemeApp = ({template}) => {
       canvas.toBlob(function(blob) {
       FileSaver.saveAs(blob, "pretty image.jpg");
      
+     
   });
-  
-    }
- 
+}   
+  function share(){
+   /*  var img=new Image();
+    img.src=canvas.toDataURL("image/png");
+    console.log(img);
+    setFb(img.url); */
+    const myCanvas=document.getElementById("myCanvas");
+    var imgdata=new Image();
+    imgdata=myCanvas.toDataURL("image/png");
+    /* var encodedPng = img.substring(img.indexOf(',') + 1, img.length);
+    var decodedPng = Base64Binary.decode(encodedPng);
+    setFb(decodedPng); */
+    
+  }
     return (
       <div>
-        
+        {/* <img width="10%" src={fb} alt=""/> */}
         <div className="bg-success"> 
         <div className="container bg-dark">
             <div className="row"> 
@@ -86,7 +99,7 @@ const MyMemeApp = ({template}) => {
             <canvas id="myCanvas" className="col-12 col-sm-4 mx-auto p-2"
             ref={canvas}
             width="500"
-            height="600"
+            height="700"
             style={{ objectFit: "contain" }}
           /> 
             </div>
@@ -115,6 +128,14 @@ const MyMemeApp = ({template}) => {
             </div>
             <div className=" container form-inline">
             <button className="btn btn-success mx-auto col-sm-3 mt-3 mb-5" onClick={download}>Download</button>
+            {/* <button className="btn btn-success mx-auto col-sm-3 mt-3 mb-5" onClick={share}>Share</button>
+            <FacebookShareButton 
+                url={fb}
+                quote={"CampersTribe - World is yours to explore"}
+                hashtag="#camperstribe"
+                className="btn">
+                 <FacebookIcon size={36} />
+              </FacebookShareButton> */}
             </div>
             </div>
             </div>
