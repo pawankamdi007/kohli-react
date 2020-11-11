@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/kohli-react/static/css/main.811854e7.chunk.css",
-    "main.js": "/kohli-react/static/js/main.fc8faedd.chunk.js",
-    "main.js.map": "/kohli-react/static/js/main.fc8faedd.chunk.js.map",
-    "runtime-main.js": "/kohli-react/static/js/runtime-main.164df646.js",
-    "runtime-main.js.map": "/kohli-react/static/js/runtime-main.164df646.js.map",
+    "main.css": "/kohli-react/static/css/main.5d87787e.chunk.css",
+    "main.js": "/kohli-react/static/js/main.963bc278.chunk.js",
+    "main.js.map": "/kohli-react/static/js/main.963bc278.chunk.js.map",
+    "runtime-main.js": "/kohli-react/static/js/runtime-main.fe4ad066.js",
+    "runtime-main.js.map": "/kohli-react/static/js/runtime-main.fe4ad066.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/kohli-react/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.51816a02.chunk.js": "/kohli-react/static/js/2.51816a02.chunk.js",
-    "static/js/2.51816a02.chunk.js.map": "/kohli-react/static/js/2.51816a02.chunk.js.map",
-    "static/js/3.f76b17e2.chunk.js": "/kohli-react/static/js/3.f76b17e2.chunk.js",
-    "static/js/3.f76b17e2.chunk.js.map": "/kohli-react/static/js/3.f76b17e2.chunk.js.map",
+    "static/js/2.b5151ab2.chunk.js": "/kohli-react/static/js/2.b5151ab2.chunk.js",
+    "static/js/2.b5151ab2.chunk.js.map": "/kohli-react/static/js/2.b5151ab2.chunk.js.map",
+    "static/js/3.eb86cc3f.chunk.js": "/kohli-react/static/js/3.eb86cc3f.chunk.js",
+    "static/js/3.eb86cc3f.chunk.js.map": "/kohli-react/static/js/3.eb86cc3f.chunk.js.map",
     "index.html": "/kohli-react/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/kohli-react/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.811854e7.chunk.css.map": "/kohli-react/static/css/main.811854e7.chunk.css.map",
-    "static/js/2.51816a02.chunk.js.LICENSE.txt": "/kohli-react/static/js/2.51816a02.chunk.js.LICENSE.txt",
+    "static/css/main.5d87787e.chunk.css.map": "/kohli-react/static/css/main.5d87787e.chunk.css.map",
+    "static/js/2.b5151ab2.chunk.js.LICENSE.txt": "/kohli-react/static/js/2.b5151ab2.chunk.js.LICENSE.txt",
     "static/media/K_Logo_White.8dbb07b7.png": "/kohli-react/static/media/K_Logo_White.8dbb07b7.png",
     "static/media/google-badge.f902960a.png": "/kohli-react/static/media/google-badge.f902960a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.164df646.js",
+    "static/js/runtime-main.fe4ad066.js",
     "static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.51816a02.chunk.js",
-    "static/css/main.811854e7.chunk.css",
-    "static/js/main.fc8faedd.chunk.js"
+    "static/js/2.b5151ab2.chunk.js",
+    "static/css/main.5d87787e.chunk.css",
+    "static/js/main.963bc278.chunk.js"
   ]
 }
