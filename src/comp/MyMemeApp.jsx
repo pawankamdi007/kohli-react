@@ -44,7 +44,7 @@ const MyMemeApp = ({template}) => {
           
          
     
-          ctx.fillText(topText, 250, 50)
+          ctx.fillText(topText, 250, 70)
           ctx.fillText(bottomText, 250,650)
     
         }
@@ -55,7 +55,7 @@ const MyMemeApp = ({template}) => {
 
 
     const font=(event)=>{
-      console.log(event.target.value);
+     /*  console.log(event.target.value); */
       setFontSize(event.target.value);
         //$("#upper").css("font-size","fontSize");
     } 
@@ -106,7 +106,7 @@ const MyMemeApp = ({template}) => {
             </div>
   
         <div className="container cont p-3 form-inline">
-        <input type="text" className="form-control col-sm-4 mx-auto mb-2" placeholder="Top Text"
+        <input type="text" className="form-control col-sm-3 mx-auto mb-2" placeholder="Top Text"
             value={topText}
             onChange={e => setTopText(e.target.value)}
           />
@@ -116,7 +116,11 @@ const MyMemeApp = ({template}) => {
             onChange={e => setBottomText(e.target.value)}
           />
             <input className="form-control col-sm-3 mx-auto mb-2" type="file" name="myImage" onChange={imageUpload} />
-            <input className="form-control  col-sm-4 mx-auto mb-2" type="number" onChange={font} min="10" max="35"  placeholder="Font Size"/>
+            
+            <div className="col-12 col-sm-3  mx-auto mb-2 mt-2">
+            <label for="customRange1" className="text-light text-center"><h5>Font Size</h5></label>
+            <input type="range" class="custom-range" min="20" max="150" id="customRange1" onChange={font}></input>
+            </div>
             <input className="form-control  col-sm-4 mx-auto mb-2" type="text" onChange={fontColorFun}   placeholder="Font Color"/>
 
             <select className="form-control  col-sm-3 mx-auto  mb-2" onChange={fontFamilyFun} type="select">
