@@ -9,7 +9,7 @@ const Footer=()=>{
         <footer>
 <div className="container">
 <div className="row">
-<div className="col-12 col-sm-3 mb-3 pt-4">
+<div className="col-12 col-sm-4  mr-3 mb-3 pt-4">
     <a className="navbar-brand" href="#">
         <img id="logo" className="img-fluid"  src={logo} alt="" /> <i>Kohli</i> MEDIA LLP.
     </a>
@@ -19,14 +19,14 @@ const Footer=()=>{
        Liablitiy Partnership.
     </p>
 </div>
-<div className="col-12 col-sm-3 mb-3 pt-5">
+<div className="col-12 col-sm-4 mb-3 pt-5">
     <div className="offset-1">
     <h3>Useful Links</h3>
     <p>Terms of Service</p>
     <p>Privacy Policy</p>
     </div>
 </div>
-<div id="contact" className="col-12 col-sm-3 mb-3 pt-5">
+<div id="contact" className="col-12 col-sm-auto mb-3 pt-5">
     <h3>Contact Us</h3>
     <hr />
     <address>
@@ -37,7 +37,7 @@ const Footer=()=>{
       <span className="fa fa-envelope fa-1x"> co@kohli.tel </span>
     </address>
 </div>
-<div className="col-12 col-sm-3 mb-3 pt-5">
+{/* <div className="col-12 col-sm-3 mb-3 pt-5">
    <h3>Family</h3>
    <hr/>
    <div className="family">   
@@ -52,10 +52,10 @@ const Footer=()=>{
    <li>Kohli Web Design</li>
    <li>Kohli Education</li>
    </div>
+</div> */}
 </div>
 </div>
-</div>
-<div className="container">
+{/* <div className="container">
 <h4 className="mt-3 mt-lg-0">Connect on Social Media</h4>
 <div className="row">
 <div className="col-12 col-sm-3  mt-3">
@@ -66,17 +66,14 @@ const Footer=()=>{
    
 </div>
 </div>
-
-<div className="col-12 col-sm-9">
-     <a className="float-lg-right " href="https://play.google.com/store/apps/details?id=com.kohli.studio.kohli"><img id="google-play" className="d-block mx-auto mt-3" src={google} width="250" height="90" alt=""/></a>
-</div>
 </div>  
-</div> 
+</div> */} 
+
 <div className="row mt-3">
-<div className="col-12 col-sm-12 text-center">
-    <p className="mb-0 mt-3">Copyright &#169; 2006-2020 <strong>Kohli Connect</strong>-Kohli Media LLP.</p>
+<div className="col-12 col-sm-12 text-center text-light">
+    <p className="mb-0 mt-3">Copyright &#169; 2006-2020 <strong>K Meme Generator</strong>-Kohli Media LLP.</p>
     <span className="mwl">#MadeWithLove</span> <span className="ks">&hearts; <a href="http://www.kohli.studio/">Kohli.Studio</a></span>
-    <button className="btn btn-light scrollbtn"><a href="#top"><span className="fa fa-arrow-up"></span></a></button> 
+    <a href="#top"><span className="btn btn-light scrollbtn fa fa-arrow-up mr-3"></span></a> 
 </div>
 </div>
 </footer>
