@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/kohli-react/static/css/main.5d87787e.chunk.css",
-    "main.js": "/kohli-react/static/js/main.21401778.chunk.js",
-    "main.js.map": "/kohli-react/static/js/main.21401778.chunk.js.map",
+    "main.js": "/kohli-react/static/js/main.1e05dda5.chunk.js",
+    "main.js.map": "/kohli-react/static/js/main.1e05dda5.chunk.js.map",
     "runtime-main.js": "/kohli-react/static/js/runtime-main.2a642bde.js",
     "runtime-main.js.map": "/kohli-react/static/js/runtime-main.2a642bde.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/kohli-react/static/css/2.20aa2d7b.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.2584ba3a.chunk.js",
     "static/css/main.5d87787e.chunk.css",
-    "static/js/main.21401778.chunk.js"
+    "static/js/main.1e05dda5.chunk.js"
   ]
 }
