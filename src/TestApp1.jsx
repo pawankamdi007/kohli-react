@@ -9,11 +9,7 @@ const TestApp1=()=>{
 
     return(
         <>
-            <Switch>
-                <Route  exact path="/" component={One}/>
-                <Route  exact path="/menu" component={MyMemeApp}/>
-                <Redirect to="/" />
-            </Switch>
+            <One/>
             <Footer/>
 
          </>
