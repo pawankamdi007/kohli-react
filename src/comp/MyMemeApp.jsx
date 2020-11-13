@@ -143,17 +143,17 @@ const bottomY=(e)=>{
             </div>
 
             <div className="col-12 col-sm-4  mx-auto mb-2 mt-2">
-            <label for="customRange1" className="text-light text-center"><h5>Set Top text in x-direction</h5></label>
-            <input type="range"className="custom-range" min="50" max="400" onChange={topX} />
-            <label for="customRange1" className="text-light text-center"><h5>Set Top text in y-direction</h5></label>
-            <input type="range"className="custom-range" min="50" max="400" onChange={topY} />
+            <label for="customRange2" className="text-light text-center"><h5>Set Top text in x-direction</h5></label>
+            <input id="customRange2" type="range"className="custom-range" min="50" max="400" onChange={topX} />
+            <label for="customRange3" className="text-light text-center"><h5>Set Top text in y-direction</h5></label>
+            <input id="customRange3" type="range"className="custom-range" min="50" max="400" onChange={topY} />
             </div>
 
             <div className="col-12 col-sm-3  mx-auto mb-2 mt-2">
-            <label for="customRange1" className="text-light text-center"><h5>Set Bottom text in x-direction</h5></label>
-            <input type="range"className="custom-range" min="50" max="450" onChange={bottomX} />
-            <label for="customRange1" className="text-light text-center"><h5>Set Bottom text in y-direction</h5></label>
-            <input type="range"className="custom-range" min="50" max="650" onChange={bottomY} />
+            <label for="customRange4" className="text-light text-center"><h5>Set Bottom text in x-direction</h5></label>
+            <input id="customRange4" type="range"className="custom-range" min="50" max="450" onChange={bottomX} />
+            <label for="customRange5" className="text-light text-center"><h5>Set Bottom text in y-direction</h5></label>
+            <input id="customRange2" type="range"className="custom-range" min="50" max="650" onChange={bottomY} />
             </div>
 
             <input className="form-control  col-sm-3 mx-auto mb-2" type="text" onChange={fontColorFun}   placeholder="Font Color"/>
