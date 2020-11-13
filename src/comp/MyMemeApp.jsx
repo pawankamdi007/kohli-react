@@ -168,7 +168,7 @@ const bottomY=(e)=>{
             </div>
             <div className=" container form-inline">
             <button className="btn btn-success mx-auto col-sm-3 mt-3 mb-5" onClick={download}>Download</button>
-            <a className="btn btn-success mx-auto col-sm-3 mt-3 mb-5" href="" >Back to Home</a>
+            <a className="btn btn-success mx-auto col-sm-3 mt-3 mb-5" href="https://pawankamdi007.github.io/kohli-react">Back to Home</a>
             {/* <button className="btn btn-success mx-auto col-sm-3 mt-3 mb-5" onClick={share}>Share</button>
             <FacebookShareButton 
                 url={fb}
