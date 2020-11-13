@@ -3,6 +3,7 @@ import {FacebookShareButton, FacebookIcon} from "react-share";
 import { React,useEffect,useRef,useState } from 'react';
 import {Base64Binary} from 'react-file-base64';
 import {Link} from 'react-router-dom';
+import Footer from './Footer';
 
 const MyMemeApp = ({template}) => {
 
@@ -19,7 +20,9 @@ const MyMemeApp = ({template}) => {
     const[bottomTextX,SetBottomTextX]=useState(250);
     const[bottomTextY,SetBottomTextY]=useState(650);
   
-    
+    useEffect(()=>{
+      window.scrollTo(0,0);
+    })  
 
     useEffect(() => {
       const catImage = new Image();
@@ -108,6 +111,7 @@ const bottomY=(e)=>{
     
   }
     return (
+      <>
       <div>
         {/* <img width="10%" src={fb} alt=""/> */}
         <div className="bg-success"> 
@@ -181,6 +185,8 @@ const bottomY=(e)=>{
             </div>
             </div>
            </div> 
+           
+           </>
            
     )
   }
