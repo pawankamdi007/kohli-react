@@ -82,6 +82,7 @@ const MemeApp=()=>{
             <div className=" container form-inline">
             <input className="btn btn-success col-sm-3 mx-auto  mt-3 mb-3 submit" onClick={fun} value="submit" type="submit"/>
             <input className="btn btn-success col-sm-3 mx-auto  mt-3 mb-5 " value="Download" type="button"/>
+            <input className="btn btn-success col-sm-3 mx-auto  mt-3 mb-5 " value="Back to Home" type="button"/>
             </div>
             </div>
             </div>

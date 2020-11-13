@@ -2,9 +2,11 @@ import FileSaver from 'file-saver';
 import {FacebookShareButton, FacebookIcon} from "react-share";
 import { React,useEffect,useRef,useState } from 'react';
 import {Base64Binary} from 'react-file-base64';
+import {Link} from 'react-router-dom';
+
 const MyMemeApp = ({template}) => {
 
-    const [image, setImage] = useState(null)
+    const [image, setImage] = useState();
     const canvas = useRef(null)
     const [topText, setTopText] = useState('')
     const [bottomText, setBottomText] = useState('')
@@ -132,6 +134,7 @@ const MyMemeApp = ({template}) => {
             </div>
             <div className=" container form-inline">
             <button className="btn btn-success mx-auto col-sm-3 mt-3 mb-5" onClick={download}>Download</button>
+            <a className="btn btn-success mx-auto col-sm-3 mt-3 mb-5" href="" >Back to Home</a>
             {/* <button className="btn btn-success mx-auto col-sm-3 mt-3 mb-5" onClick={share}>Share</button>
             <FacebookShareButton 
                 url={fb}

@@ -1,10 +1,7 @@
-import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from "react";
 import MyMemeApp from "../comp/MyMemeApp";
-import {Card,CardImg } from 'reactstrap';
-import Meme from '../meme/Meme';
-import Myphoto from '../gallary/Myphoto';
+import {Link} from 'react-router-dom';
 
 const One=()=>{
     

@@ -1,10 +1,12 @@
-
 import TestApp1 from './TestApp1';
+import {BrowserRouter} from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <TestApp1 />
+      <BrowserRouter>
+          <TestApp1 />
+      </BrowserRouter>
     </>
   );
 }

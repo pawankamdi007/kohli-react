@@ -7,12 +7,11 @@ import './index.css';
 import One from './meme/one';
 
 import reportWebVitals from './reportWebVitals';
-import TestApp1 from './TestApp1';
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <One/>
-    <Footer />
+      <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
