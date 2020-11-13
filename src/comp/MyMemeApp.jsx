@@ -14,7 +14,12 @@ const MyMemeApp = ({template}) => {
     const[fontFamily,setFontFamily]=useState("helvetica");
     const[fontColor,setFontColor]=useState("black");
     const[fb,setFb]=useState('');
-   
+    const[topTextX,SetTopTextX]=useState(250);
+    const[topTextY,SetTopTextY]=useState(50);
+    const[bottomTextX,SetBottomTextX]=useState(250);
+    const[bottomTextY,SetBottomTextY]=useState(650);
+  
+    
 
     useEffect(() => {
       const catImage = new Image();
@@ -37,24 +42,35 @@ const MyMemeApp = ({template}) => {
   
           const ctx = canvas.current.getContext("2d")
           ctx.fillStyle = "black"
+          //ctx.clearRect(0,0,500,700);
+          ctx.drawImage(image, 0, 0,500,700);
          
-          ctx.drawImage(image, 0, 0,500,700)
-    
           ctx.font = `${fontSize}px ${fontFamily}`
           ctx.fillStyle = `${fontColor}`
           ctx.textAlign = "center"
           
-         
-    
-          ctx.fillText(topText, 250, 70)
-          ctx.fillText(bottomText, 250,650)
-    
+          ctx.fillText(topText, topTextX, topTextY);
+          ctx.fillText(bottomText, bottomTextX,bottomTextY);
+          
         }
+        
       }, [image, canvas, topText, bottomText,fontColor,fontFamily,fontSize])
     
-
+      
   
-
+ const topX=(e)=>{
+  SetTopTextX(e.target.value);
+  // console.log(e.target.value);
+}
+const topY=(e)=>{
+  SetTopTextY(e.target.value);
+}
+const bottomX=(e)=>{
+  SetBottomTextX(e.target.value);
+}
+const bottomY=(e)=>{
+  SetBottomTextY(e.target.value);
+}
 
     const font=(event)=>{
      /*  console.log(event.target.value); */
@@ -108,6 +124,7 @@ const MyMemeApp = ({template}) => {
             </div>
   
         <div className="container cont p-3 form-inline">
+        
         <input type="text" className="form-control col-sm-3 mx-auto mb-2" placeholder="Top Text"
             value={topText}
             onChange={e => setTopText(e.target.value)}
@@ -118,12 +135,28 @@ const MyMemeApp = ({template}) => {
             onChange={e => setBottomText(e.target.value)}
           />
             <input className="form-control col-sm-3 mx-auto mb-2" type="file" name="myImage" onChange={imageUpload} />
+           
             
             <div className="col-12 col-sm-3  mx-auto mb-2 mt-2">
             <label for="customRange1" className="text-light text-center"><h5>Font Size</h5></label>
-            <input type="range" class="custom-range" min="20" max="150" id="customRange1" onChange={font}></input>
+            <input type="range" className="custom-range" min="20" max="150" id="customRange1" onChange={font}></input>
             </div>
-            <input className="form-control  col-sm-4 mx-auto mb-2" type="text" onChange={fontColorFun}   placeholder="Font Color"/>
+
+            <div className="col-12 col-sm-4  mx-auto mb-2 mt-2">
+            <label for="customRange1" className="text-light text-center"><h5>Set Top text in x-direction</h5></label>
+            <input type="range"className="custom-range" min="50" max="400" onChange={topX} />
+            <label for="customRange1" className="text-light text-center"><h5>Set Top text in y-direction</h5></label>
+            <input type="range"className="custom-range" min="50" max="400" onChange={topY} />
+            </div>
+
+            <div className="col-12 col-sm-3  mx-auto mb-2 mt-2">
+            <label for="customRange1" className="text-light text-center"><h5>Set Bottom text in x-direction</h5></label>
+            <input type="range"className="custom-range" min="50" max="450" onChange={bottomX} />
+            <label for="customRange1" className="text-light text-center"><h5>Set Bottom text in y-direction</h5></label>
+            <input type="range"className="custom-range" min="50" max="650" onChange={bottomY} />
+            </div>
+
+            <input className="form-control  col-sm-3 mx-auto mb-2" type="text" onChange={fontColorFun}   placeholder="Font Color"/>
 
             <select className="form-control  col-sm-3 mx-auto  mb-2" onChange={fontFamilyFun} type="select">
             <option defaultValue>Select Font style</option>
@@ -131,6 +164,7 @@ const MyMemeApp = ({template}) => {
             <option value="Times New Roman">Times New Roman</option>
             <option value="Courier New">Courier New</option>
             </select>
+            
             </div>
             <div className=" container form-inline">
             <button className="btn btn-success mx-auto col-sm-3 mt-3 mb-5" onClick={download}>Download</button>
