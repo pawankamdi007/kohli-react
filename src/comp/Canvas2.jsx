@@ -5,7 +5,7 @@ import {useState} from 'react';
 const Canvas2=()=>{
 
     const [image,setImage]=useState();
-    const [fontSize,setFontSize]=useState(35);
+    const [fontSize,setFontSize]=useState();
     const[posX,setPosX]=useState(50);
     
     const imageUpload=(event)=>{
@@ -24,9 +24,11 @@ const Canvas2=()=>{
         const ctx1=canvas1.getContext("2d");
         
         ctx.drawImage(image, 0, 0,500,700);
-        ctx1.font = `${fontSize} 'sans-serif'`;
         ctx1.clearRect(0,0,500,300);
         ctx1.fillText("Hello", posX, 100);
+        ctx1.font = `${fontSize}px 'sans-serif'`;
+        
+       
         
     }
     
@@ -63,9 +65,9 @@ return(
         <input  type="file" name="myImage" onChange={imageUpload} />
         <button onClick={fun}>Click</button>
         <div>
-        <canvas width="500" height="400" style={{background:"black",position:"relative"}} id="myCanvas">
+        <canvas width="500" height="400" style={{background:"black",position:"relative",left:"100px"}} id="myCanvas">
         </canvas>
-        <canvas  width="500" height="400"  style={{position:"absolute",left:"0px"}} id="myCanvas2"></canvas>
+        <canvas  width="500" height="400"  style={{position:"absolute",left:"100px"}} id="myCanvas2"></canvas>
         </div>
         <input type="range" min="50" max="400" onChange={fun1} />
         <button onClick={download}>download</button> 

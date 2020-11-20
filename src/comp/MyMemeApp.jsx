@@ -119,15 +119,14 @@ const bottomY=(e)=>{
             ref={canvas}
             width="500"
             height="700"
-            style={{ objectFit: "contain" }}
+            style={{ objectFit: "contain"}}
           /> 
             </div>
             </div>
   
         <div className="container cont p-3 form-inline">
         
-        <input type="text" className="form-control col-sm-3 mx-auto mb-2" placeholder="Top Text"
-            value={topText}
+        <input type="text" className="form-control col-sm-3 mx-auto mb-2" placeholder="Top Text"  value={topText}
             onChange={e => setTopText(e.target.value)}
           />
           <br />
