@@ -33,7 +33,7 @@ const MyMemeApp = ({template}) => {
         
         const catImage = new Image();
         catImage.src = URL.createObjectURL(img);
-        catImage.onload = () => setImage(catImage)
+        catImage.onload = () => setImage(catImage);
         
       };
       
@@ -97,7 +97,7 @@ const bottomY=(e)=>{
   function share(){
    /*  var img=new Image();
     img.src=canvas.toDataURL("image/png");
-    console.log(img);
+    cojnsole.log(img);
     setFb(img.url); */
     const myCanvas=document.getElementById("myCanvas");
     var imgdata=new Image();

@@ -4,14 +4,14 @@ import Footer from './comp/Footer';
 import MyPhoto from './gallary/Myphoto';
 import Photos from './gallary/photos';
 import './index.css';
-import One from './meme/one';
-
+import Canvas2 from  './comp/Canvas2';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-      <App/>
+      <Canvas2
+      />
   </React.StrictMode>,
   document.getElementById('root')
 );
