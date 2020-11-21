@@ -1,13 +1,14 @@
 import FileSaver from 'file-saver';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
 
 const Canvas2=()=>{
 
-    const [image,setImage]=useState();
+    const [image,setImage]=useState("https://picsum.photos/300/300");
     const [fontSize,setFontSize]=useState();
     const[posX,setPosX]=useState(50);
     
+
     const imageUpload=(event)=>{
         
         var img=event.target.files[0];
@@ -17,16 +18,31 @@ const Canvas2=()=>{
         catImage.onload=()=>setImage(catImage);
         console.log(catImage);
     }
+    useEffect(()=>{
+       
+        const catImage = new Image();
+        catImage.src = image
+        catImage.onload=()=>setImage(catImage);
+        
+    });
+
+   const fun2=()=>{
+        const canvas=document.getElementById("myCanvas");
+        const ctx=canvas.getContext("2d");
+        ctx.drawImage(image, 0, 0,500,700);
+    }
+
     const fun=()=>{
         const canvas=document.getElementById("myCanvas");
         const ctx=canvas.getContext("2d");
+        
         const canvas1=document.getElementById("myCanvas2");
         const ctx1=canvas1.getContext("2d");
         
         ctx.drawImage(image, 0, 0,500,700);
-        ctx1.clearRect(0,0,500,300);
-        ctx1.fillText("Hello", posX, 100);
-        ctx1.font = `${fontSize}px 'sans-serif'`;
+        //ctx.clearRect(0,0,500,700);
+        ctx.fillText("Hello", posX, 100);
+        ctx.font = `${fontSize}px 'sans-serif'`;
         
        
         

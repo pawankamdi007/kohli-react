@@ -39,9 +39,27 @@ const MyMemeApp = ({template}) => {
       
       useEffect(() => {
         if(image && canvas) {  
-  
-          const ctx = canvas.current.getContext("2d")
-          ctx.fillStyle = "black"
+          const canvas=document.getElementById("myCanvas");   
+          const ctx = canvas.getContext("2d");
+         
+          //ctx.clearRect(0,0,500,700);
+          ctx.drawImage(image, 0, 0,500,700);
+          ctx.font = `${fontSize}px ${fontFamily}`
+          ctx.fillStyle = `${fontColor}`
+          ctx.textAlign = "center"
+          
+          ctx.fillText(topText, topTextX, topTextY);
+          ctx.fillText(bottomText, bottomTextX,bottomTextY);
+          
+        }
+        
+      }, [image, canvas, topText, bottomText,fontColor,fontFamily,fontSize])
+      
+      /* useEffect(() => {
+        if(image && canvas) {  
+          const canvas=document.getElementById("myCanvas");   
+          const ctx = canvas.getContext("2d");
+         
           //ctx.clearRect(0,0,500,700);
           ctx.drawImage(image, 0, 0,500,700);
          
@@ -55,34 +73,64 @@ const MyMemeApp = ({template}) => {
         }
         
       }, [image, canvas, topText, bottomText,fontColor,fontFamily,fontSize])
+       */
+
+      const fun=()=>{
+        const canvas=document.getElementById("myCanvas");
+        const ctx=canvas.getContext("2d");
+        /* const canvas1=document.getElementById("myCanvas2");
+        const ctx1=canvas1.getContext("2d"); */
+        
+        ctx.drawImage(image, 0, 0,500,700);
+       // ctx.clearRect(0,0,500,300);
+       ctx.font = `${fontSize}px ${fontFamily}`
+       ctx.fillStyle = `${fontColor}`
+       ctx.textAlign = "center"
+       
+       ctx.fillText(topText, topTextX, topTextY);
+       ctx.fillText(bottomText, bottomTextX,bottomTextY);
+        
+    }
     
+    const fun1=(e)=>{
+        console.log(e.target.value);
+        SetTopTextX(e.target.value);
+        fun();
+    }
       
   
  const topX=(e)=>{
   SetTopTextX(e.target.value);
   // console.log(e.target.value);
+  fun();
 }
 const topY=(e)=>{
   SetTopTextY(e.target.value);
+  fun();
 }
 const bottomX=(e)=>{
   SetBottomTextX(e.target.value);
+  fun();
 }
 const bottomY=(e)=>{
   SetBottomTextY(e.target.value);
+  fun();
 }
 
     const font=(event)=>{
      /*  console.log(event.target.value); */
       setFontSize(event.target.value);
         //$("#upper").css("font-size","fontSize");
+      
     } 
     const fontFamilyFun=(event)=>{
         console.log(event.target.value);
         setFontFamily(event.target.value);
+        
     }
     const fontColorFun=(event)=>{
         setFontColor(event.target.value);
+        
     }
   
    function download(){
@@ -144,7 +192,7 @@ const bottomY=(e)=>{
 
             <div className="col-12 col-sm-4  mx-auto mb-2 mt-2">
             <label for="customRange2" className="text-light text-center"><h5>Set Top text in x-direction</h5></label>
-            <input id="customRange2" type="range"className="custom-range" min="50" max="400" onChange={topX} />
+            <input id="customRange2" type="range"className="custom-range" min="50" max="400" onChange={fun1} />
             <label for="customRange3" className="text-light text-center"><h5>Set Top text in y-direction</h5></label>
             <input id="customRange3" type="range"className="custom-range" min="50" max="300" onChange={topY} />
             </div>
